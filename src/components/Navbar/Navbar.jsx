@@ -11,7 +11,7 @@ const Navbar = () => {
       <div className="flex flex-shrink-0 items-center">
         {/* <img className="mx-2 w-10" src={logo} alt="Logo" /> */}
         <i class="bi bi-code-slash">
-          <h1 className="mx-2 w-15 text-2xl">Rithik Raja S</h1>
+          <h1 className="mx-2 w-15 text-2xl">RR</h1>
         </i>
       </div>
       <div className="m-8 flex items-center justifiy-center gap-4 text-2x">
