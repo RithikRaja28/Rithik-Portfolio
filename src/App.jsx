@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar/Navbar";
 import Hero from "./components/Hero.jsx/Hero";
 import About from "./components/About/About";
 import Technology from "./components/Technologies/Technology";
+import Experience from "./components/Experience/Experience";
 
 const App = () => {
   return (
@@ -16,6 +17,7 @@ const App = () => {
         <Hero />
         <About />
         <Technology />
+        <Experience />
       </div>
     </div>
   );
