@@ -15,7 +15,9 @@ const Navbar = () => {
         </i>
       </div>
       <div className="m-8 flex items-center justifiy-center gap-4 text-2x">
-        <FaLinkedin onClick={()=> window.open("www.google.com")} />
+        
+          <FaLinkedin />
+      
         <FaGithub />
         <FaSquareXTwitter />
         <FaInstagram />

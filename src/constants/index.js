@@ -49,8 +49,9 @@ export const PROJECTS = [
     title: "Movie Munchies",
     image: project1,
     description:
-      "A fully functional e-commerce website with features like product listing, shopping cart, and user authentication.",
+      "A fully functional food ordering System in Theatre with features like Food items listing, shopping cart, and user authentication.",
     technologies: [ "React", "Node.js", "MongoDB" ,"Express Js"],
+    link: "movie-munchies.vercel.app",
   }
 ];
 

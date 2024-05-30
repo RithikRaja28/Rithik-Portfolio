@@ -24,12 +24,15 @@ const Project = () => {
               <img
                 src={project.image}
                 alt={project.title}
-                className="mb-6 rounded"
+                className="mb-6 rounded-2xl"
               />
             </motion.div>
             <motion.div whileInView={{opacity:1,x:0}} initial={{opacity:0,x:-100}} transition={{duration: 1}} className="w-full max-w-xl lg:w-3/4">
               <h6 className="mb-2 font-semibold">{project.title}</h6>
               <p className="mb-4 text-neutral-400">{project.description}</p>
+              <span className="text-slate-300 pr-2">Visit:</span>
+              <a target="blank" href="https://movie-munchies.vercel.app/" className="mb-4 text-neutral-400">{project.link}</a><br />
+              <br/>
               {project.technologies.map((tech, index) => (
                 <span
                   key={index}
