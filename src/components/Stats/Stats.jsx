@@ -22,10 +22,28 @@ const Stats = () => {
     <div className="container mx-auto">
         <div className='flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none'>
             {stats.map((item,index)=>{
-                return <div key={index} className='flex-1 flex gap-4 items-center justify-center xl:justify-center'>
-                    <CountUp end={item.num} duration={5} delay={2} className='text-4xl xl:text-5xl font-extrabold' />
-                    <p className={`${item.text.length < 15 ? "max-w-[100px]" : "max-w-[150px]"}leading-snug text-white/80`}>{item.text}</p>
-                </div>
+                return (
+                  <div
+                    key={index}
+                    className="flex-1 flex gap-4 items-center justify-center xl:justify-center"
+                  >
+                    <CountUp
+                      end={item.num}
+                      duration={5}
+                      delay={2}
+                      className="bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 bg-clip-text text-3xl tracking-tight text-transparent xl:text-4xl font-extrabold"
+                    />
+                    <p
+                      className={`${
+                        item.text.length < 15
+                          ? "max-w-[100px]"
+                          : "max-w-[150px]"
+                      }leading-snug text-white/80`}
+                    >
+                      {item.text}
+                    </p>
+                  </div>
+                );
             })}
         </div>
     </div>
