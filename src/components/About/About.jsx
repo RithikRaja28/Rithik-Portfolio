@@ -36,13 +36,13 @@ const About = () => {
             <motion.ol
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
-              transition={{ duration: 1 }}
+              transition={{ duration: 0.5 }}
               className="my-2 max-w-xl py-6 relative border-s border-gray-200 dark:border-gray-700"
             >
               <motion.li
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.5 }}
+                transition={{ duration: 1.2 }}
                 class="mb-10 ms-4"
               >
                 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -55,7 +55,7 @@ const About = () => {
               <motion.li
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.5 }}
+                transition={{ duration: 1.2 }}
                 class="mb-10 ms-4"
               >
                 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -67,7 +67,7 @@ const About = () => {
               <motion.li
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.5 }}
+                transition={{ duration: 1.2 }}
                 class="mb-10 ms-4"
               >
                 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -81,7 +81,7 @@ const About = () => {
               <motion.li
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.5 }}
+                transition={{ duration: 1.2 }}
                 class="mb-10 ms-4"
               >
                 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
@@ -95,7 +95,7 @@ const About = () => {
               <motion.li
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.5 }}
+                transition={{ duration: 1.2 }}
                 class="mb-10 ms-4"
               >
                 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
