@@ -45,12 +45,13 @@ const Hero = () => {
             >
               {HERO_CONTENT}
             </motion.p>
+            {/* to be changed */}
             <motion.button
               variants={container(1.5)}
               initial="hidden"
               animate="visible"
-              whileHover={{ scale: 1.05 }}
-              className="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center"
+              whileHover={{ scale: 1.05, backgroundColor: 'transparent'}}
+              className="bg-transparent hover:border-gradient border-2 border-transpar text-white-900 font-bold py-2 px-4 rounded inline-flex items-center"
             >
               <svg
                 class="fill-current w-4 h-4 mr-2"
