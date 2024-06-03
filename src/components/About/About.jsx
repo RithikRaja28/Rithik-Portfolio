@@ -33,17 +33,17 @@ const About = () => {
         >
           <div className="flex justify-center lg:justify-start">
             {/* <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p> */}
-            <motion.ol
+            <motion.ul
               whileInView={{ opacity: 1, y: 0 }}
               initial={{ opacity: 0, y: -100 }}
               transition={{ duration: 0.5 }}
-              className="my-2 max-w-xl py-6 relative border-s border-gray-200 dark:border-gray-700"
+              className="my-4 max-w-xl py-6 relative border-s border-gray-200 dark:border-gray-700"
             >
               <motion.li
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
                 transition={{ duration: 1.2 }}
-                class="mb-10 ms-4"
+                class="mb-12 ms-4"
               >
                 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
@@ -56,7 +56,7 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
                 transition={{ duration: 1.2 }}
-                class="mb-10 ms-4"
+                class="mb-12 ms-4"
               >
                 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
@@ -68,12 +68,12 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
                 transition={{ duration: 1.2 }}
-                class="mb-10 ms-4"
+                class="mb-12 ms-4"
               >
                 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  I bring excellent communication and collaboration skills to
+                  I bring excellent collaboration and communication skills to
                   every project.
                 </h3>
               </motion.li>
@@ -82,13 +82,13 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
                 transition={{ duration: 1.2 }}
-                class="mb-10 ms-4"
+                class="mb-12 ms-4"
               >
                 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                   I bridge the gap between data and user experience, utilizing
-                  full-stack development to build user-centric web application.
+                  full-stack development to build user-centric web applications.
                 </h3>
               </motion.li>
 
@@ -96,16 +96,16 @@ const About = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 initial={{ opacity: 0, y: -100 }}
                 transition={{ duration: 1.2 }}
-                class="mb-10 ms-4"
+                class="mb-12 ms-4"
               >
                 <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white ">
-                  I am proficient in HTML, CSS, JavaScript, React, Node.js,
+                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
+                  I am proficient in: HTML, CSS, JavaScript, React, Node.js,
                   Python, MongoDB, and Express.
                 </h3>
               </motion.li>
-            </motion.ol>
+            </motion.ul>
           </div>
         </motion.div>
       </motion.div>
