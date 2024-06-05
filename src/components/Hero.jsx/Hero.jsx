@@ -47,11 +47,25 @@ const Hero = () => {
               {HERO_CONTENT}
             </motion.p>
             {/* to be changed */}
-            
-            <button  className="flex items-center gap-2 m-3 ">
+
+            <motion.button
+              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, x: -100 }}
+              transition={{ duration: 1 }}
+              className="flex items-center gap-2 m-2 rounded-full border p-2"
+              onClick={() => {
+                const link = document.createElement("a");
+                link.href =
+                  "https://drive.google.com/file/d/107M3yZe95U-Y0K6LE5JJV2Ab5xJEAJh_/view?usp=sharing";
+                link.download = "RithikRajaS.resume.pdf";
+                link.click();
+              }}
+            >
               <span>Download CV</span>
-              <FiDownload className="text-xl" />
-            </button>
+              <span>
+                <FiDownload className="text-xl" />
+              </span>
+            </motion.button>
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">
