@@ -6,6 +6,8 @@ import { SiMongodb } from "react-icons/si";
 import { FaNodeJs } from "react-icons/fa";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { motion } from "framer-motion";
+import { SiFlutter } from "react-icons/si";
+
 
 const iconVariants = (duration) => ({
   initial: { y: -10 },
@@ -45,7 +47,7 @@ const Technology = () => {
           <RiReactjsLine className="text-7xl text-cyan-400" />
         </motion.div>
         <motion.div
-          variants={iconVariants(4)}
+          variants={iconVariants(3.5)}
           initial="initial"
           animate="animate"
           className="rounded-3xl border-2 border-neutral-800 p-1 m-1"
@@ -53,7 +55,7 @@ const Technology = () => {
           <FaNodeJs className="text-7xl text-green-500" />
         </motion.div>
         <motion.div
-          variants={iconVariants(6)}
+          variants={iconVariants(4.5)}
           initial="initial"
           animate="animate"
           className="rounded-3xl border-2 border-neutral-800 p-1 m-1"
@@ -61,12 +63,20 @@ const Technology = () => {
           <TbBrandNextjs className="text-7xl " />
         </motion.div>
         <motion.div
-          variants={iconVariants(8)}
+          variants={iconVariants(5.5)}
           initial="initial"
           animate="animate"
           className="rounded-3xl border-2 border-neutral-800 p-1 m-1"
         >
           <SiMongodb className="text-7xl text-green-500" />
+        </motion.div>
+        <motion.div
+          variants={iconVariants(6.5)}
+          initial="initial"
+          animate="animate"
+          className="rounded-3xl border-2 border-neutral-800 p-1 m-1"
+        >
+          <SiFlutter className="text-7xl text-flutter" />
         </motion.div>
       </motion.div>
     </div>
