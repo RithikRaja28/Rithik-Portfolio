@@ -2,6 +2,7 @@ import React from "react";
 import { HERO_CONTENT } from "../../constants";
 import profilePic from "../../assets/rithikrajaprofilepic.jpg";
 import { motion } from "framer-motion";
+import { FiDownload } from "react-icons/fi";
 const container = (delay)=>({
   hidden:{x:-100,opacity:0},
   visible:{
@@ -46,22 +47,11 @@ const Hero = () => {
               {HERO_CONTENT}
             </motion.p>
             {/* to be changed */}
-            <motion.button
-              variants={container(1.5)}
-              initial="hidden"
-              animate="visible"
-              whileHover={{ scale: 1.05, backgroundColor: 'transparent'}}
-              className="bg-transparent hover:border-gradient border-2 border-transpar text-white-900 font-bold py-2 px-4 rounded inline-flex items-center"
-            >
-              <svg
-                class="fill-current w-4 h-4 mr-2"
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 20 20"
-              >
-                <path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z" />
-              </svg>
+            
+            <button  className="flex items-center gap-2 m-3 ">
               <span>Download CV</span>
-            </motion.button>
+              <FiDownload className="text-xl" />
+            </button>
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">
