@@ -37,9 +37,11 @@
  z-index: -1;
  border-radius: 4px;
  transform: translateY(0%);
- background-color: #01e056;
- border: solid 1px #01e0572d;
+  background: linear-gradient(to right, #f472b6, #6b7280, #8b5cf6);
  transition: all .5s cubic-bezier(0.77, 0, 0.175, 1);
+  border: solid 1px rgba(1, 224, 86, 0.17); 
+  padding: 10px;
+    border-radius: 5px;
 }
 
 .download-button:hover .download {

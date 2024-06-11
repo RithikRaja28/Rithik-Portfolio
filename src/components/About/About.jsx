@@ -45,7 +45,7 @@ const About = () => {
                 transition={{ duration: 1.2 }}
                 class="mb-12 ms-4"
               >
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div class="absolute w-3 h-3 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
 
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                   Craft user-friendly and secure web applications from design to
@@ -58,7 +58,8 @@ const About = () => {
                 transition={{ duration: 1.2 }}
                 class="mb-12 ms-4"
               >
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div class="absolute w-3 h-3 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+
 
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                   I translate ideas into interactive experiences.
@@ -70,7 +71,8 @@ const About = () => {
                 transition={{ duration: 1.2 }}
                 class="mb-12 ms-4"
               >
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div class="absolute w-3 h-3 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+
 
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                   I bring excellent collaboration and communication skills to
@@ -84,7 +86,8 @@ const About = () => {
                 transition={{ duration: 1.2 }}
                 class="mb-12 ms-4"
               >
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div class="absolute w-3 h-3 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+
 
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                   I bridge the gap between data and user experience, utilizing
@@ -98,7 +101,8 @@ const About = () => {
                 transition={{ duration: 1.2 }}
                 class="mb-12 ms-4"
               >
-                <div class="absolute w-3 h-3 bg-gray-200 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+                <div class="absolute w-3 h-3 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
+
 
                 <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
                   I am proficient in: HTML, CSS, JavaScript, React, Node.js,
