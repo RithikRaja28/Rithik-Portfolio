@@ -62,9 +62,9 @@ const Hero = () => {
                 link.click();
               }}
             >
-              <div class="docs">
+              <div class="docs mb-2">
                 <svg
-                  class="css-i6dzq1"
+                  class="css-i6dzq1 mb-2"
                   stroke-linejoin="round"
                   stroke-linecap="round"
                   fill="none"
@@ -100,6 +100,7 @@ const Hero = () => {
                 </svg>
               </div>
             </motion.button>
+            <br />
           </div>
         </div>
         <div className="w-full lg:w-1/2 lg:p-8">
