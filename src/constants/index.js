@@ -1,5 +1,5 @@
 import project1 from "../assets/projects/project-1.png";
-import project2 from "../assets/projects/project-2.jpg";
+import project2 from "../assets/projects/project-2.png";
 import project3 from "../assets/projects/project-3.jpg";
 import project4 from "../assets/projects/project-4.jpg";
 
@@ -15,44 +15,47 @@ export const ABOUT_TEXT = `I am a dedicated and versatile full stack developer w
 
 export const EXPERIENCES = [
   {
-    year: "2023 - Present",
-    role: "Senior Full Stack Developer",
-    company: "Google Inc.",
-    description: `Led a team in developing and maintaining web applications using JavaScript, React.js, and Node.js. Implemented RESTful APIs and integrated with MongoDB databases. Collaborated with stakeholders to define project requirements and timelines.`,
-    technologies: ["Javascript", "React.js", "Next.js", "mongoDB"],
-  },
-  {
-    year: "2022 - 2023",
-    role: "Frontend Developer",
-    company: "Adobe",
-    description: `Designed and developed user interfaces for web applications using Next.js and React. Worked closely with backend developers to integrate frontend components with Node.js APIs. Implemented responsive designs and optimized frontend performance.`,
-    technologies: ["HTML", "CSS", "Vue.js", "mySQL"],
-  },
-  {
-    year: "2021 - 2022",
-    role: "Full Stack Developer",
-    company: "Facebook",
-    description: `Developed and maintained web applications using JavaScript, React.js, and Node.js. Designed and implemented RESTful APIs for data communication. Collaborated with cross-functional teams to deliver high-quality software products on schedule.`,
-    technologies: ["Python", "Svelte", "Three.js", "Postgres"],
-  },
-  {
-    year: "2020 - 2021",
-    role: "Software Engineer",
-    company: "Paypal",
-    description: `Contributed to the development of web applications using JavaScript, React.js, and Node.js. Managed databases and implemented data storage solutions using MongoDB. Worked closely with product managers to prioritize features and enhancements.`,
-    technologies: ["Ruby", "Rails", "PHP", "Sqlite"],
+    year: "Jun. 2024 - Jul. 2024",
+    role: "Product Developer Intern",
+    company: "Global Knowledge Technologies",
+
+    description: `Developed a user-friendly interface using React and Bootstrap, significantly improving the platform's accessibility , visual appeal and responsive design. I implemented SEO best practices, including optimizing meta tags and content structure, which led to a substantial increase in organic search visibility and traffic.`,
+    technologies: [
+      "Javascript",
+      "React.js",
+      "Bootstrap",
+      "SEO",
+      "React Helmet",
+      "Git",
+      "Github",
+    ],
   },
 ];
 
 export const PROJECTS = [
   {
+    title: "Retro Brew",
+    image: project2,
+    description:
+      "A web application that allows users to search for their favorite coffee and order coffee online and initiated reward system for the user who have crossed some threshold.",
+    technologies: ["React", "Firebase", "Bootstrap", "Git", "Github"],
+    link: "https://retrobreww.web.app/",
+  },
+  {
     title: "Movie Munchies",
     image: project1,
     description:
       "A fully functional food ordering System in Theatre with features like Food items listing, shopping cart, and user authentication.",
-    technologies: [ "React", "Node.js", "MongoDB" ,"Express Js"],
-    link: "movie-munchies.vercel.app",
-  }
+    technologies: [
+      "React",
+      "Node.js",
+      "MongoDB",
+      "Express.Js",
+      "Git",
+      "Github",
+    ],
+    link: "https://movie-munchies.vercel.app/",
+  },
 ];
 
 export const CONTACT = {
