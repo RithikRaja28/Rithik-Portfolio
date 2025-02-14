@@ -34,6 +34,14 @@ export const EXPERIENCES = [
 
 export const PROJECTS = [
   {
+    title: "Synckin.ai",
+    image: project2,
+    description:
+      "Our platform merges task organization, finance tracking, family collaboration, and personalized AI services into one modern, sleek interface.",
+    technologies: ["React", "Express", "Node", "MongoDB", "Llama", "A.I.", "REST API", "Stripe"],
+    link: "https://github.com/RithikRaja28/synckin.ai",
+  },
+  {
     title: "Retro Brew",
     image: project2,
     description:

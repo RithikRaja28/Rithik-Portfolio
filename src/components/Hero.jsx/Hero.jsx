@@ -103,17 +103,25 @@ const Hero = () => {
             <br />
           </div>
         </div>
-        <div className="w-full lg:w-1/2 lg:p-8">
-          <div className="flex justify-center">
-            <motion.img
-              className="rounded-3xl"
-              initial={{ x: 100, opacity: 0 }}
-              animate={{ x: 0, opacity: 1 }}
-              transition={{ duration: 1, delay: 1.2 }}
-              src={profilePic}
-              alt="Rithik Raja S's Profile"
-            />
-          </div>
+        <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+          <motion.div
+            initial={{ x: 50, opacity: 0 }}
+            animate={{ x: 0, opacity: 1 }}
+            transition={{ duration: 1, delay: 1.2 }}
+            className="w-full max-w-lg"
+          >
+            <iframe
+              src="https://my.spline.design/planetcopy-817054e31e9ab9b6ace614a7ac8b9305/"
+              frameBorder="0"
+              width="100%"
+              height="500px" // Increased height
+              style={{
+                minHeight: "500px", // Ensures full visibility
+                maxHeight: "600px", // Prevents excessive stretching
+              }}
+              className="rounded-xl shadow-lg"
+            ></iframe>
+          </motion.div>
         </div>
       </div>
     </motion.div>
