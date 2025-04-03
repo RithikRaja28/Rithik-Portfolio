@@ -57,7 +57,7 @@ const Hero = () => {
               onClick={() => {
                 const link = document.createElement("a");
                 link.href =
-                  "https://drive.google.com/file/d/1egG0fa9Erjp_IDbh9qclGQfhpfJIdses/view?usp=sharing";
+                  "https://drive.google.com/file/d/10_bduR0ra0rAZkO2AVhZKMFw2duuE4iv/view?usp=drive_link";
                 link.download = "RithikRajaS.resume.pdf";
                 link.click();
               }}

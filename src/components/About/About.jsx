@@ -1,118 +1,144 @@
-import React from "react";
-import { ABOUT_TEXT } from "../../constants";
-import profilePic from "../../assets/rithikrajaprofilepic.jpg";
+import React, { useEffect, useState } from "react";
 import { motion } from "framer-motion";
-import Stats from "../Stats/Stats";
+import profilePic from "../../assets/rithikrajaprofilepic.jpg";
+
+const timelineData = [
+  {
+    text: "Design and develop secure, scalable, and user-friendly web applications, leveraging expertise in both front-end and back-end technologies.",
+  },
+  {
+    text: "Transform ideas into seamless, interactive digital experiences with a focus on performance and usability.",
+  },
+  {
+    text: "Collaborate effectively with teams, ensuring clear communication and streamlined development processes.",
+  },
+  {
+    text: "Bridge the gap between data and user experience by building intuitive, full-stack applications tailored to user needs.",
+  },
+  {
+    text: "Proficient in: HTML, CSS, JavaScript, React, Node.js, Python, MongoDB, and Express, with a strong foundation in modern web development.",
+  },
+];
+
+// Developer-themed emojis
+const floatingEmojis = [
+  "💻",
+  "🖥️",
+  "📱",
+  "⚙️",
+  "📝",
+  "📱",
+  "⚙️",
+  "💡",
+  "🤖",
+  "🤖",
+  "🧑‍💻",
+  "👨‍💻",
+  " 👩‍💻",
+  "📱",
+  "🔌",
+  "💻",
+  "🖥️",
+  "💾",
+  "🔍",
+];
+
+const FloatingEmoji = ({ emoji }) => {
+  // Random initial position
+  const [position, setPosition] = useState({
+    x: Math.random() * window.innerWidth,
+    y: Math.random() * window.innerHeight,
+  });
+
+  // Re-randomize position on resize
+  useEffect(() => {
+    const handleResize = () => {
+      setPosition({
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+      });
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return (
+    <motion.div
+      className="absolute text-5xl opacity-30"
+      style={{ left: position.x, top: position.y }}
+      animate={{
+        x: [position.x, Math.random() * window.innerWidth],
+        y: [position.y, Math.random() * window.innerHeight],
+        rotate: [0, 360],
+      }}
+      transition={{ repeat: Infinity, duration: 9, ease: "linear" }}
+    >
+      {emoji}
+    </motion.div>
+  );
+};
+
 const About = () => {
   return (
-    <div className="border-b border-neutral-900 pb-4">
+    <div className="relative overflow-hidden border-b border-neutral-900 pb-12 px-4 sm:px-6 md:px-12 lg:px-20">
+      {/* Floating Emojis Background */}
+      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
+        {floatingEmojis.map((emoji, index) => (
+          <FloatingEmoji key={index} emoji={emoji} />
+        ))}
+      </div>
+
+      {/* Heading */}
       <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -100 }}
+        initial={{ opacity: 0, y: -50 }}
         transition={{ duration: 1 }}
-        className="my-20 text-center text-4xl"
+        className="relative my-10 md:my-16 text-center text-3xl md:text-4xl font-bold text-white"
       >
-        What I <span className="text-neutral-500">Do</span>
+        What I <span className="text-purple-400">Do</span>
       </motion.h1>
-      <motion.div
-        whileInView={{ opacity: 1, x: 0 }}
-        initial={{ opacity: 0, x: -100 }}
-        transition={{ duration: 0.5 }}
-        className="flex flex-wrap"
-      >
-        <div className="w-full lg:w-1/2 lg:p-8">
-          <div className="flex items-center justify-center">
-            <img className="rounded-2xl" src={profilePic} alt="About" />
-          </div>
-        </div>
-        <motion.div
-          whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.5 }}
-          className="w-full lg:w-1/2"
-        >
-          <div className="flex justify-center lg:justify-start">
-            {/* <p className="my-2 max-w-xl py-6">{ABOUT_TEXT}</p> */}
-            <motion.ul
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: -100 }}
-              transition={{ duration: 0.5 }}
-              className="my-4 max-w-xl py-6 relative border-s border-gray-200 dark:border-gray-700"
+
+      {/* Profile Image */}
+      <div className="relative flex justify-center mb-8">
+        <img
+          className="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 shadow-lg ring-4 ring-purple-500 hover:scale-105 transition-transform duration-300"
+          src={profilePic}
+          alt="Profile"
+        />
+      </div>
+
+      {/* Timeline */}
+      <div className="relative mx-auto max-w-[95%] sm:max-w-[90%] md:max-w-4xl">
+        {/* Vertical Line */}
+        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-purple-500 to-gray-700 h-full"></div>
+
+        {timelineData.map((item, index) => (
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 40 }}
+            transition={{ duration: 0.6, delay: index * 0.1 }}
+            key={index}
+            className={`relative flex flex-col md:flex-row w-full my-8 items-center ${
+              index % 2 === 0 ? "md:justify-start" : "md:justify-end"
+            }`}
+          >
+            {/* Timeline Dots */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 md:static md:-translate-x-0 md:left-auto w-5 h-5 md:w-6 md:h-6 bg-purple-500 rounded-full border-2 border-white shadow-md animate-bounce transition-all duration-300 hover:scale-110"></div>
+
+            {/* Timeline Card */}
+            <div
+              className={`relative w-full md:w-5/12 p-6 backdrop-blur-md bg-white/10 border border-gray-500 shadow-xl rounded-lg text-white transition-transform duration-300 hover:scale-105 ${
+                index % 2 === 0
+                  ? "md:text-left md:ml-10"
+                  : "md:text-right md:mr-10"
+              }`}
             >
-              <motion.li
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.2 }}
-                class="mb-12 ms-4"
-              >
-                <div class="absolute w-3 h-3 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  Craft user-friendly and secure web applications from design to
-                  deployment, leveraging both front-end and back-end expertise.
-                </h3>
-              </motion.li>
-              <motion.li
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.2 }}
-                class="mb-12 ms-4"
-              >
-                <div class="absolute w-3 h-3 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-
-
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  I translate ideas into interactive experiences.
-                </h3>
-              </motion.li>
-              <motion.li
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.2 }}
-                class="mb-12 ms-4"
-              >
-                <div class="absolute w-3 h-3 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-
-
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  I bring excellent collaboration and communication skills to
-                  every project.
-                </h3>
-              </motion.li>
-
-              <motion.li
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.2 }}
-                class="mb-12 ms-4"
-              >
-                <div class="absolute w-3 h-3 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-
-
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  I bridge the gap between data and user experience, utilizing
-                  full-stack development to build user-centric web applications.
-                </h3>
-              </motion.li>
-
-              <motion.li
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                transition={{ duration: 1.2 }}
-                class="mb-12 ms-4"
-              >
-                <div class="absolute w-3 h-3 bg-gradient-to-r from-pink-300 via-slate-500 to-purple-500 rounded-full mt-1.5 -start-1.5 border border-white dark:border-gray-900 dark:bg-gray-700"></div>
-
-
-                <h3 class="text-lg font-semibold text-gray-900 dark:text-white">
-                  I am proficient in: HTML, CSS, JavaScript, React, Node.js,
-                  Python, MongoDB, and Express.
-                </h3>
-              </motion.li>
-            </motion.ul>
-          </div>
-        </motion.div>
-      </motion.div>
+              <h3 className="text-base md:text-lg font-semibold leading-relaxed">
+                {item.text}
+              </h3>
+            </div>
+          </motion.div>
+        ))}
+      </div>
     </div>
   );
 };

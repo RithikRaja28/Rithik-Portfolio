@@ -1,7 +1,7 @@
 import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.png";
-import project3 from "../assets/projects/project-3.jpg";
-import project4 from "../assets/projects/project-4.jpg";
+import projectsynckin from "../assets/projects/projectsynckin.png";
+
 
 export const HERO_CONTENT = ` A dedicated web developer with a fervent passion for bringing
               digital ideas to life. Armed with expertise in M.E.R.N. Stack, I
@@ -35,10 +35,10 @@ export const EXPERIENCES = [
 export const PROJECTS = [
   {
     title: "Synckin.ai",
-    image: project2,
+    image: projectsynckin,
     description:
       "Our platform merges task organization, finance tracking, family collaboration, and personalized AI services into one modern, sleek interface.",
-    technologies: ["React", "Express", "Node", "MongoDB", "Llama", "A.I.", "REST API", "Stripe"],
+    technologies: ["React", "Express", "Node", "MongoDB", "Llama", "A.I."],
     link: "https://github.com/RithikRaja28/synckin.ai",
   },
   {
