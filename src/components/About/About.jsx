@@ -121,8 +121,7 @@ const About = () => {
               index % 2 === 0 ? "md:justify-start" : "md:justify-end"
             }`}
           >
-            {/* Timeline Dots */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 md:static md:-translate-x-0 md:left-auto w-5 h-5 md:w-6 md:h-6 bg-purple-500 rounded-full border-2 border-white shadow-md animate-bounce transition-all duration-300 hover:scale-110"></div>
+            {/*  */}
 
             {/* Timeline Card */}
             <div
