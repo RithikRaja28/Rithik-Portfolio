@@ -1,144 +1,96 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { motion } from "framer-motion";
-import profilePic from "../../assets/rithikrajaprofilepic.jpg";
+import { Code2, Cpu, Users, Database, Layers, Cloud } from "lucide-react"; // Lucide icons
+import profilePic from "../../assets/Rithik-Profile.jpg";
 
 const timelineData = [
   {
-    text: "Design and develop secure, scalable, and user-friendly web applications, leveraging expertise in both front-end and back-end technologies.",
+    icon: <Code2 className="text-purple-400 w-8 h-8" />,
+    title: "Full-Stack Development",
+    text: "Design and develop secure, scalable, and user-friendly web applications using modern front-end and back-end technologies.",
   },
   {
-    text: "Transform ideas into seamless, interactive digital experiences with a focus on performance and usability.",
+    icon: <Cpu className="text-purple-400 w-8 h-8" />,
+    title: "Performance & Usability",
+    text: "Transform ideas into smooth, high-performing, and interactive digital experiences focusing on responsiveness and UX.",
   },
   {
-    text: "Collaborate effectively with teams, ensuring clear communication and streamlined development processes.",
+    icon: <Users className="text-purple-400 w-8 h-8" />,
+    title: "Team Collaboration",
+    text: "Work efficiently with cross-functional teams, ensuring clear communication and streamlined development workflows.",
   },
   {
-    text: "Bridge the gap between data and user experience by building intuitive, full-stack applications tailored to user needs.",
+    icon: <Database className="text-purple-400 w-8 h-8" />,
+    title: "Data & UX Integration",
+    text: "Bridge the gap between data and design by building full-stack applications that translate complex information into intuitive interfaces.",
   },
   {
-    text: "Proficient in: HTML, CSS, JavaScript, React, Node.js, Python, MongoDB, and Express, with a strong foundation in modern web development.",
+    icon: <Layers className="text-purple-400 w-8 h-8" />,
+    title: "Tech Stack Expertise",
+    text: "Proficient in React, Node.js, Express, MongoDB, and Python — building modern, scalable, and maintainable solutions.",
+  },
+  {
+    icon: <Cloud className="text-purple-400 w-8 h-8" />,
+    title: "Cloud & Continuous Learning",
+    text: "Exploring cloud technologies such as AWS practices — continuously adapting to emerging tools and frameworks to stay ahead in modern development.",
   },
 ];
-
-// Developer-themed emojis
-const floatingEmojis = [
-  "💻",
-  "🖥️",
-  "📱",
-  "⚙️",
-  "📝",
-  "📱",
-  "⚙️",
-  "💡",
-  "🤖",
-  "🤖",
-  "🧑‍💻",
-  "👨‍💻",
-  " 👩‍💻",
-  "📱",
-  "🔌",
-  "💻",
-  "🖥️",
-  "💾",
-  "🔍",
-];
-
-const FloatingEmoji = ({ emoji }) => {
-  // Random initial position
-  const [position, setPosition] = useState({
-    x: Math.random() * window.innerWidth,
-    y: Math.random() * window.innerHeight,
-  });
-
-  // Re-randomize position on resize
-  useEffect(() => {
-    const handleResize = () => {
-      setPosition({
-        x: Math.random() * window.innerWidth,
-        y: Math.random() * window.innerHeight,
-      });
-    };
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-  return (
-    <motion.div
-      className="absolute text-5xl opacity-30"
-      style={{ left: position.x, top: position.y }}
-      animate={{
-        x: [position.x, Math.random() * window.innerWidth],
-        y: [position.y, Math.random() * window.innerHeight],
-        rotate: [0, 360],
-      }}
-      transition={{ repeat: Infinity, duration: 9, ease: "linear" }}
-    >
-      {emoji}
-    </motion.div>
-  );
-};
 
 const About = () => {
   return (
-    <div className="relative overflow-hidden border-b border-neutral-900 pb-12 px-4 sm:px-6 md:px-12 lg:px-20">
-      {/* Floating Emojis Background */}
-      <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-        {floatingEmojis.map((emoji, index) => (
-          <FloatingEmoji key={index} emoji={emoji} />
-        ))}
-      </div>
-
+    <section className="relative min-h-screen px-6 sm:px-12 py-16 border-b border-neutral-800 bg-transparent">
       {/* Heading */}
-      <motion.h1
+      {/* <motion.h1
         whileInView={{ opacity: 1, y: 0 }}
-        initial={{ opacity: 0, y: -50 }}
-        transition={{ duration: 1 }}
-        className="relative my-10 md:my-16 text-center text-3xl md:text-4xl font-bold text-white"
+        initial={{ opacity: 0, y: -30 }}
+        transition={{ duration: 0.8 }}
+        className="text-center text-4xl md:text-5xl font-bold text-white mb-12"
       >
-        What I <span className="text-purple-400">Do</span>
-      </motion.h1>
-
-      {/* Profile Image */}
-      <div className="relative flex justify-center mb-8">
-        <img
-          className="rounded-full w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 shadow-lg ring-4 ring-purple-500 hover:scale-105 transition-transform duration-300"
-          src={profilePic}
-          alt="Profile"
-        />
-      </div>
-
-      {/* Timeline */}
-      <div className="relative mx-auto max-w-[95%] sm:max-w-[90%] md:max-w-4xl">
-        {/* Vertical Line */}
-        <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gradient-to-b from-purple-500 to-gray-700 h-full"></div>
-
-        {timelineData.map((item, index) => (
-          <motion.div
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 40 }}
-            transition={{ duration: 0.6, delay: index * 0.1 }}
-            key={index}
-            className={`relative flex flex-col md:flex-row w-full my-8 items-center ${
-              index % 2 === 0 ? "md:justify-start" : "md:justify-end"
-            }`}
-          >
-            {/*  */}
-
-            {/* Timeline Card */}
-            <div
-              className={`relative w-full md:w-5/12 p-6 backdrop-blur-md bg-white/10 border border-gray-500 shadow-xl rounded-lg text-white transition-transform duration-300 hover:scale-105 ${
-                index % 2 === 0
-                  ? "md:text-left md:ml-10"
-                  : "md:text-right md:mr-10"
-              }`}
+       
+      </motion.h1> */}
+      <motion.h1
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -100 }}
+              transition={{ duration: 1.5 }}
+              className="my-20 text-center text-4xl"
             >
-              <h3 className="text-base md:text-lg font-semibold leading-relaxed">
-                {item.text}
-              </h3>
+              <span className="text-neutral-500">What</span> I Do
+            </motion.h1>
+      {/* Profile */}
+      <div className="flex justify-center mb-14">
+        <div className="relative">
+          <div className="absolute inset-0 bg-purple-500 blur-xl opacity-25 rounded-full"></div>
+          <img
+            src={profilePic}
+            alt="Profile"
+            className="relative w-28 h-28 sm:w-36 sm:h-36 rounded-full ring-4 ring-purple-500 shadow-lg hover:scale-110 transition-transform duration-300"
+          />
+        </div>
+      </div>
+      {/* Cards Section */}
+      <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3 justify-center max-w-6xl mx-auto">
+        {timelineData.map((item, i) => (
+          <motion.div
+            key={i}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
+            whileHover={{ scale: 1.05 }}
+            className="group relative p-8 border border-neutral-700 rounded-2xl bg-transparent backdrop-blur-md hover:border-purple-500 hover:shadow-[0_0_25px_rgba(168,85,247,0.3)] transition-all duration-300"
+          >
+            <div className="flex items-center gap-4 mb-4">
+              <div className="p-3 rounded-xl bg-purple-500/10 group-hover:bg-purple-600/20 transition-colors">
+                {item.icon}
+              </div>
+              <h3 className="text-lg font-semibold text-white">{item.title}</h3>
             </div>
+            <p className="text-gray-300 text-base leading-relaxed">
+              {item.text}
+            </p>
           </motion.div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

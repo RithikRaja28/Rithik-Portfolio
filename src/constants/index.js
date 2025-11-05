@@ -1,7 +1,9 @@
 import project1 from "../assets/projects/project-1.png";
 import project2 from "../assets/projects/project-2.png";
 import projectsynckin from "../assets/projects/projectsynckin.png";
-
+import projectpinpoint from "../assets/projects/projectpinpoint.png";
+import projectzerotrust from "../assets/projects/projectzerotrust.png";
+import projectseithi360 from "../assets/projects/projectseithi360.png";
 
 export const HERO_CONTENT = ` A dedicated web developer with a fervent passion for bringing
               digital ideas to life. Armed with expertise in M.E.R.N. Stack, I
@@ -30,6 +32,28 @@ export const EXPERIENCES = [
       "Github",
     ],
   },
+  {
+    year: "Sep. 2025 - Oct. 2025",
+    role: "GSMA Open Gateway Hackathon Winner- 1st Price(4,00,000 INR)",
+    company: "GSMA | Nokia",
+
+    description: ` Secured 1st Place among 400+ teams PinPoint is an AI-powered local marketing platform designed to help small businesses grow effortlessly. PinPoint enables local shop owners to launch instant, automated marketing campaigns by leveraging real-time location intelligence. Using geofencing technology, it detects when users enter specific areas and instantly promotes nearby offers through push notifications or SMS - connecting businesses with customers at the perfect moment.`,
+    technologies: ["Flutter", "Flask", "Python"],
+  },
+  {
+    year: "Sep. 2025 - Sep. 2025",
+    role: "Global MCP Hackathon Winner- 2nd Price (3000 USD)",
+    company: "Descope | HackerEarth",
+    description: `Secured 2nd place among global participants (students, solo devs, startup founders, enterprise engineers). Built Z3r0Trust, an autonomous multi-agent security framework powered by Descope for secure agent-to-agent communication.`,
+    technologies: [
+      "Splunk",
+      "React.js",
+      "Python",
+      "FASTAPI",
+      "Descope",
+      "Flask",
+    ],
+  },
 ];
 
 export const PROJECTS = [
@@ -40,6 +64,30 @@ export const PROJECTS = [
       "Our platform merges task organization, finance tracking, family collaboration, and personalized AI services into one modern, sleek interface.",
     technologies: ["React", "Express", "Node", "MongoDB", "Llama", "A.I."],
     link: "https://github.com/RithikRaja28/synckin.ai",
+  },
+  {
+    title: "PinPoint – Hyperlocal Marketing and Discovery Platform",
+    image: projectpinpoint,
+    description:
+      "Developed PinPoint an AI-powered hyper-local marketing platform designed to help small businesses grow effortlessly using geofencing and network APIs.",
+    technologies: ["Flutter", "Flask", "Python", "Firebase"],
+    link: "https://github.com/RithikRaja28/PinPoint-Hyperlocal-Marketing-and-Discovery-Platform",
+  },
+  {
+    title: "Z3r0 Trust - Middleware Application",
+    image: projectzerotrust,
+    description:
+      "Developed Z3r0Trust, an autonomous multi-agent security framework powered by Descope to safeguard enterprise systems from modern cyber threats.",
+    technologies: ["React", "Express", "MySQL", "Splunk", "Descope", "FastAPI"],
+    link: "https://github.com/rohitvijayan1111/Z3r0Trust",
+  },
+  {
+    title: "Seithi360",
+    image: projectseithi360,
+    description:
+      "Developed Seithi360, a feature-rich news aggregator delivering 100% verified news. Built custom APIs and scrapers for seamless content aggregation from trusted sources.",
+    technologies: ["React", "Express", "MySQL", "WebScraping", "RSS Feeds"],
+    link: "https://github.com/rohitvijayan1111/Seithi-360",
   },
   {
     title: "Retro Brew",
