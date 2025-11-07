@@ -51,6 +51,15 @@
 .download svg polyline,.download svg line {
  animation: docs 1s infinite;
 }
+@keyframes gradient-move {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-move 6s ease infinite;
+}
+
 
 @keyframes docs {
  0% {

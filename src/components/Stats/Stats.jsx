@@ -19,7 +19,7 @@ import { motion } from 'framer-motion'
 const Stats = () => {
   return (
    <motion.section whileInView={{opacity:1,y:0}} initial={{opacity:0,y:-100}} transition={{duration:0.5}} className='pt-4 pb-12 xl:pt-0 xl:pb-8 xl:mt-6 mt-4'>
-    <div className="container mx-auto">
+    <div className="container mx-auto mt-10 px-2">
         <div className='flex flex-wrap gap-6 max-w-[80vw] mx-auto xl:max-w-none'>
             {stats.map((item,index)=>{
                 return (
